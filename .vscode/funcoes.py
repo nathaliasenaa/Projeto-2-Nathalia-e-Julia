@@ -1,0 +1,13 @@
+import random
+def rolar_dados (n): 
+    resultado = []
+    for i in range (n): 
+        dado = random.randint (1, 6)
+        resultado.append (dado)
+    return resultado 
+
+def guardar_dado (dados_rolados, dados_guardados, indice): 
+    dado = dados_rolados [indice] 
+    dados_guardados.append(dado)
+    dados_rolados.pop(indice) 
+    return [dados_rolados, dados_guardados] 
