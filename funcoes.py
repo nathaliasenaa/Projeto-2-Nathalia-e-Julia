@@ -32,6 +32,14 @@ def calcula_pontos_regra_simples (faces_dados_rolados):
         calcula_pontos[i]+=i
     return calcula_pontos
 
+def calcula_pontos_soma (faces_dados): 
+    n = 0 
+    i = 0 
+    while i < len(faces_dados): 
+        n = n + faces_dados[i] 
+        i = i + 1 
+    return n
+
 
 
 
