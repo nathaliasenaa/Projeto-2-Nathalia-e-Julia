@@ -96,6 +96,15 @@ def calcula_pontos_quadra (dados_rolados):
             return soma 
     return 0
 
+def calcula_pontos_quina (dados_rolados):
+    for x in dados_rolados:
+        n=0 
+        for n1 in dados_rolados:
+            if n1==x: 
+                n= n+1 
+        if n>=5:
+            return 50 
+    return 0
 
 
 
