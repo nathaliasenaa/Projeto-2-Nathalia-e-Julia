@@ -58,7 +58,30 @@ def calcula_pontos_sequencia_alta (dados_rolados):
     else: 
         return 0 
 
+def calcula_pontos_full_house (dados_rolados):
+    n=0 #contagem de quantas vezes o primeiro número aparece
+    for x in dados_rolados:
+        if x == dados_rolados[0]:
+            n= n+1
 
+    n2= None 
+    for x in dados_rolados:
+        if x != dados_rolados[0]:
+            n2= x #definição do segundo número da lista
+    if n2==None:
+        return 0
+    
+    n_2 = 0 #contagem de quantas vezes o segundo número aparece
+    for x in dados_rolados:
+        if x == n2:
+            n_2 = n_2 + 1
+    
+    if (n==3 and n_2==2) or (n==2 and n_2==3):
+        soma=0 
+        for x in dados_rolados:
+            soma = soma + x 
+        return soma 
+    return 0
 
 
 
