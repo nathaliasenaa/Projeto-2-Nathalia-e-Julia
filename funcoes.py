@@ -83,6 +83,18 @@ def calcula_pontos_full_house (dados_rolados):
         return soma 
     return 0
 
+def calcula_pontos_quadra (dados_rolados):
+    for x in dados_rolados:
+        n=0 #contagem de quantas vezes o numero x aparece
+        for n1 in dados_rolados:
+            if n1==x: #verifica se o primeiro numero é igual aos proximos 
+                n= n+1 #cada vez que encontra o mesmo numero soma na contagem de quantas vezes x aparece
+        if n>=4:
+            soma= 0
+            for y in dados_rolados:
+                soma = soma + y
+            return soma 
+    return 0
 
 
 
