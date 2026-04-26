@@ -341,3 +341,4 @@ def faz_jogada (dados_rolados, categoria, cartela):
 
 
 
+
