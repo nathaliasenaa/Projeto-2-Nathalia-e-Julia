@@ -106,6 +106,17 @@ def calcula_pontos_quina (dados_rolados):
             return 50 
     return 0
 
+def calcula_pontos_regra_avancada (dados_rolados): 
+    pontos = { 
+        'cinco_iguais': calcula_pontos_quina (dados_rolados), 
+        'full_house': calcula_pontos_full_house (dados_rolados), 
+        'quadra': calcula_pontos_quadra (dados_rolados), 
+        'sem_combinacao': calcula_pontos_soma(dados_rolados), 
+        'sequencia_alta': calcula_pontos_sequencia_alta(dados_rolados),
+        'sequencia_baixa': calcula_pontos_sequencia_baixa(dados_rolados)
+    }
+    return pontos
+
 
 
 
